@@ -1,0 +1,21 @@
+{
+	"name": "bookgit",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"proxy/*/*",
+		"service/*/*"
+	],
+	"scripts": {
+		"types": "bun run --filter=* types",
+		"format": "biome format --write",
+		"lint": "biome lint --write",
+		"typecheck": "bun run --filter=* typecheck"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.0-beta.1",
+		"@cloudflare/workers-types": "^4.20250327.0",
+		"hono": "^4.7.5",
+		"wrangler": "^4.6.0"
+	}
+}
